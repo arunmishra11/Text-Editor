@@ -2,13 +2,13 @@
     "name": "JATE",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "src/server.js",
     "scripts": {
-      "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\"",
-      "start": "npm run build && cd server && node server.js",
-      "server": "cd server && nodemon server.js --ignore client",
+      "start:dev": "concurrently \"cd client && npm run build\" \"cd src && npm run server\"",
+      "start": "npm run build && cd src && node server.js",
+      "server": "cd src && nodemon server.js --ignore client",
       "build": "cd client && npm run build",
-      "install": "cd server && npm i && cd ../client && npm i",
+      "install": "cd src && npm i && cd ../client && npm i",
       "client": "cd client && npm start"
     },
     "keywords": [],
@@ -20,7 +20,9 @@
     },
     "devDependencies": {
       "concurrently": "^5.2.0",
-      "nodemon": "^2.0.4"
+      "nodemon": "^2.0.4",
+      "webpack": "^5.0.0",
+      "webpack-cli": "^4.0.0"
     }
   }
   
